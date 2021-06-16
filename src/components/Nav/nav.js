@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { capitalizeFirstLetter } from '../../utils/helpers';
-import coverImage from '../../assets/cover/portfolio-header.jpg';
+import coverImage from '../../assets/cover/portfolio-header-best.jpg';
 
 function Nav(props) {
   const {
