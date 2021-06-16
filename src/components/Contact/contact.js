@@ -7,17 +7,17 @@ function Contact() {
     <ul>
       <li>
         Github:
-        <a href="https://github.com/kmcpherson49" target="_blank"
+        <a href="https://github.com/kmcpherson49" rel="noreferrer" target="_blank"
           >github.com/kmcpherson49</a>
       </li>
       <li>
         Email:
-        <a href="mailto:kmcpherson49@gmail.com" target="_blank"
+        <a href="mailto:kmcpherson49@gmail.com" rel="noreferrer" target="_blank"
           >kmcpherson49@gmail.com</a>
       </li>
       <li>
         Linkedin:
-        <a href="https://www.linkedin.com/in/kristamcpherson" target="_blank"
+        <a href="https://www.linkedin.com/in/kristamcpherson" rel="noreferrer" target="_blank"
           >Krista McPherson</a>
       </li>
     </ul>

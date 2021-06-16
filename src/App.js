@@ -1,20 +1,22 @@
 
-//import './App.css';
-// import React from 'react';
-// import Nav from '/components/Nav';
-// import About from '/components/About';
-// import Contact from '/components/Contact';
+
+import React from 'react';
+import Nav from './components/Nav/nav';
+import About from './components/About/about';
+import Contact from './components/Contact/contact';
 //import Portfolio from '/components/Portfolio';
 //import Resume from '/components/Resume';
 
 function App() {
   return (
     <div>
-      {/* <Nav></Nav>
+      <Nav></Nav>
+      <main>
       <About></About>
       <Contact></Contact>
-      <Portfolio></Portfolio>
+      {/* <Portfolio></Portfolio>
       <Resume></Resume> */}
+      </main>
     </div>
   );
 }
