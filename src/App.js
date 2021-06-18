@@ -5,7 +5,7 @@ import Nav from './components/Nav/nav';
 import About from './components/About/about';
 import Contact from './components/Contact/contact';
 //import Portfolio from '/components/Portfolio';
-//import Resume from '/components/Resume';
+import Resume from './components/Resume/resume';
 
 function App() {
   const[tabs] = useState([
@@ -35,8 +35,8 @@ function App() {
       ></Nav>
       <main>
       <About></About>
-      {/* <Portfolio></Portfolio>
-      <Resume></Resume> */}
+      {/* <Portfolio></Portfolio> */}
+      <Resume></Resume>
       <Contact></Contact>
     
       </main>
