@@ -25,7 +25,7 @@ function Resume() {
           Node.Js | Express | JavaScript | jQuery | React.js | React | JSX | GIT
           | GitHub | MongoDB | MySQL | Mongoose | Handlebars | HTML5 | CSS3 |
           Bootstrap | Materialize | APIs | Heroku | Terminal | AJAX | Restful
-          API | ES6 | React Hooks | JSON | Sequelize{" "}
+          API | ES6 | React Hooks | JSON | Sequelize
         </p>
       </div>
       <div>

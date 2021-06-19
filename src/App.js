@@ -2,27 +2,24 @@
 
 import React, { useState } from 'react';
 import Nav from './components/Nav/nav';
-import About from './components/About/about';
-import Contact from './components/Contact/contact';
-//import Portfolio from '/components/Portfolio';
-import Resume from './components/Resume/resume';
+
+import Page from './components/Page/page'
 
 function App() {
   const[tabs] = useState([
-    {name: 'contact',
-  description: "Let's get in touch"
+    {name: 'contact'
   },
-  {name: 'portfolio',
-  description: "A collection of my work"
+  {name: 'portfolio'
   },
-  {name: 'resume',
-  description: "Take a look at the things I've done"
+  {name: 'resume'
+  },
+  {name: 'about me'
   },
   ]);
 
   const [currentTab, setCurrentTab] = useState(tabs[0]);
 
-  const [contactSelected, setContactSelected] = useState(false);
+  //const [contactSelected, setContactSelected] = useState(false);
 
   return (
     <div>
@@ -30,15 +27,11 @@ function App() {
       tabs={tabs}
       setCurrentTab={setCurrentTab}
       currentTab={currentTab}
-      contactSelected={contactSelected}
-      setContactSelected={setContactSelected}
+      // contactSelected={contactSelected}
+      // setContactSelected={setContactSelected}
       ></Nav>
       <main>
-      <About></About>
-      {/* <Portfolio></Portfolio> */}
-      <Resume></Resume>
-      <Contact></Contact>
-    
+      <Page currentTab={currentTab}></Page>
       </main>
     </div>
   );

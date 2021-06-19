@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
-import { capitalizeFirstLetter } from '../../utils/helpers';
+import React, { useEffect } from "react";
+import { capitalizeFirstLetter } from "../../utils/helpers";
 //import coverImage from '../../assets/cover/portfolio-header-best.jpg';
 
 function Nav(props) {
   const {
     tabs = [],
     setCurrentTab,
-    contactSelected,
+    // contactSelected,
     currentTab,
-    setContactSelected,
+    // setContactSelected,
   } = props;
 
   useEffect(() => {
@@ -17,28 +17,21 @@ function Nav(props) {
 
   return (
     <header className="flex-row px-1">
-    <h1>
-      <a href="/">Krista McPherson's Portfolio</a>
-    </h1>
-    {/* <img src={coverImage} className="my-2" style={{ width: "100%" }} alt="cover" /> */}
-    <nav>
+      <h1>
+        <a href="/">Krista McPherson's Portfolio</a>
+      </h1>
+      {/* <img src={coverImage} className="my-2" style={{ width: "100%" }} alt="cover" /> */}
+      <nav>
         <ul className="flex-row">
-          <li className="mx-2">
-            <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
-              About me
-            </a>
-          </li>
+          <li className="mx-2"></li>
           {tabs.map((tab) => (
             <li
-              className={`mx-1 ${
-                currentTab.name === tab.name && !contactSelected && 'navActive'
-                }`}
+              className={`mx-1 ${currentTab.name === tab.name && "navActive"}`}
               key={tab.name}
             >
               <span
                 onClick={() => {
                   setCurrentTab(tab);
-                  setContactSelected(false);
                 }}
               >
                 {capitalizeFirstLetter(tab.name)}
@@ -47,7 +40,7 @@ function Nav(props) {
           ))}
         </ul>
       </nav>
-  </header>
+    </header>
   );
 }
 
