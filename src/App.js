@@ -7,19 +7,17 @@ import Page from './components/Page/page'
 
 function App() {
   const[tabs] = useState([
-    {name: 'contact'
+    {name: 'about me'
   },
   {name: 'portfolio'
   },
   {name: 'resume'
   },
-  {name: 'about me'
+  {name: 'contact'
   },
   ]);
 
   const [currentTab, setCurrentTab] = useState(tabs[0]);
-
-  //const [contactSelected, setContactSelected] = useState(false);
 
   return (
     <div>
@@ -27,8 +25,6 @@ function App() {
       tabs={tabs}
       setCurrentTab={setCurrentTab}
       currentTab={currentTab}
-      // contactSelected={contactSelected}
-      // setContactSelected={setContactSelected}
       ></Nav>
       <main>
       <Page currentTab={currentTab}></Page>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-//import Modal from ''
+import Modal from '../Modal/modal';
+
 const Portfolio = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentProject, setCurrentProject] = useState();
@@ -49,6 +50,8 @@ const Portfolio = () => {
     },
   ]);
 
+  const currentProjects = project.filter((project) => project.name === project)
+
   const toggleModal = (image, i) => {
     setCurrentProject({ ...image, index: i });
     setIsModalOpen(!isModalOpen);
@@ -60,7 +63,7 @@ const Portfolio = () => {
         <Modal onClose={toggleModal} currentProject={currentProject} />
       )}
       <div className="flex-row">
-        {currentProject.map((image, i) => (
+        {currentProjects.map((image, i) => (
           <img
             src={require(`../../assets/screenshots/${i}.jpg`)}
             alt={image.name}
