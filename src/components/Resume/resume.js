@@ -1,20 +1,23 @@
 import React from "react";
-import{ Container } from 'react-bootstrap'
+import{ Container, Card } from 'react-bootstrap'
 
 function Resume() {
   return (
     <section>
         <Container>
+            <Card>
       <div>
         <h1>Krista McPherson</h1>
-        <p>Scottsdale, AZ 85250</p>
-        <p>602.478.0038</p>
-        <p>kmcpherson49@gmail.com</p>
-        <a href="https://www.linkedin.com/in/kristamcpherson">LinkedIn</a>
-        <a href="https://github.com/kmcpherson49">Github</a>
+        <Card.Body>
+        <Card.Text>Scottsdale, AZ 85250</Card.Text>
+        <Card.Text>602.478.0038</Card.Text>
+        <Card.Text>kmcpherson49@gmail.com</Card.Text>
+        <Card.Link href="https://www.linkedin.com/in/kristamcpherson">LinkedIn</Card.Link>
+        <Card.Link href="https://github.com/kmcpherson49">Github</Card.Link>
+        </Card.Body>
       </div>
       <div>
-        <h2>Summary</h2>
+        <Card.Title>Summary</Card.Title>
         <p>
           Full Stack Web Developer with a background in Social Media Marketing
           and passion for learning. Known for providing consistent work and
@@ -22,7 +25,7 @@ function Resume() {
         </p>
       </div>
       <div>
-        <h2>Technical Skills</h2>
+        <Card.Title>Technical Skills</Card.Title>
         <p>
           Node.Js | Express | JavaScript | jQuery | React.js | React | JSX | GIT
           | GitHub | MongoDB | MySQL | Mongoose | Handlebars | HTML5 | CSS3 |
@@ -31,9 +34,9 @@ function Resume() {
         </p>
       </div>
       <div>
-        <h2>Education</h2>
-        <h3>Full Stack Web Development Certificate</h3>
-        <p>University of Arizona</p> <p>2021</p>
+        <Card.Title>Education</Card.Title>
+        <Card.Title>Full Stack Web Development Certificate</Card.Title>
+        <Card.Subtitle>University of Arizona</Card.Subtitle> <Card.Subtitle>2021</Card.Subtitle>
         <h3>
           Bachelor of Science in Communication (Minor in Digital Audiences)
         </h3>
@@ -42,7 +45,7 @@ function Resume() {
         <p>Scottsdale Community College</p> <p>2019</p>
       </div>
       <div>
-        <h2>Experience</h2>
+        <Card.Title>Experience</Card.Title>
         <h3>Marketing Associate </h3>
         <h3>Emerald Wealth</h3>
         <p>2020 - Present</p>
@@ -62,6 +65,7 @@ function Resume() {
           executing social media campaigns and cultivating client relations.
         </p>
       </div>
+      </Card>
       </Container>
     </section>
   );
