@@ -1,9 +1,14 @@
 import React from "react";
 import Headshot from "../../assets/headshot/headshot.jpg"
+import { Container, Row, Col, Image } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function About() {
   return (
     <section id="about-me" className="about-me">
+      <Container>
+        <Row>
+        <Col xs={6}>
       <div className="bio">
         <h2>About Me</h2>
         <p>Welcome! My name is Krista McPherson.</p>
@@ -26,10 +31,15 @@ function About() {
           website, or app.
         </p>
       </div>
+      </Col>
+      <Col>
       <div className="headshot">
-        <h2>headshot</h2>
-        <img src={Headshot} alt="" />
+        <Image  width={500}
+    height={500} src={Headshot} rounded alt="" />
       </div>
+      </Col>
+      </Row>
+      </Container>
     </section>
   );
 }

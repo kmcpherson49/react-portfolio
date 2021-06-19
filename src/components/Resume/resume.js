@@ -1,8 +1,10 @@
 import React from "react";
+import{ Container } from 'react-bootstrap'
 
 function Resume() {
   return (
     <section>
+        <Container>
       <div>
         <h1>Krista McPherson</h1>
         <p>Scottsdale, AZ 85250</p>
@@ -60,6 +62,7 @@ function Resume() {
           executing social media campaigns and cultivating client relations.
         </p>
       </div>
+      </Container>
     </section>
   );
 }

@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 import Nav from './components/Nav/nav';
-
-import Page from './components/Page/page'
+import Page from './components/Page/page';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const[tabs] = useState([
