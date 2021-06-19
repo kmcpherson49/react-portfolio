@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Modal from '../Modal/modal';
+import { Card } from "react-bootstrap";
 
-const Portfolio = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentProject, setCurrentProject] = useState();
 
+function Portfolio() {
+  
   const [project] = useState([
     {
+      image: `../../assets/screenshots/0.jpg`,
       name: "Planetarium Party",
       description:
         "This project is an app that allows users to search for their favorite planet and in return they'll get an image from the NASA API and a portion of the Wikipedia article about that planet. It features continuous dark mode to enhance the feel of being in space.",
@@ -14,6 +14,7 @@ const Portfolio = () => {
       repo: "https://github.com/kmcpherson49/Planetarium-Party",
     },
     {
+      image: `../../assets/screenshots/1.jpg`,
       name: "Weather Dashboard",
       description:
         "This project is a weather app that will give users the forecast for the day plus a 5-day forecast",
@@ -21,6 +22,7 @@ const Portfolio = () => {
       repo: "https://github.com/kmcpherson49/weather-dashboard",
     },
     {
+      image: `../../assets/screenshots/2.jpg`,
       name: "Day Planner",
       description:
         "This project is an electronic day planner used to add tasks to time slots in order to stay organized.",
@@ -28,6 +30,7 @@ const Portfolio = () => {
       repo: "https://github.com/kmcpherson49/work-scheduler",
     },
     {
+      image: `../../assets/screenshots/3.jpg`,
       name: "Password Generator",
       description:
         "This project is a password generator that will give users a secure, random password after a series of prompts.",
@@ -35,6 +38,7 @@ const Portfolio = () => {
       repo: "https://github.com/kmcpherson49/password-generator",
     },
     {
+      image: `../../assets/screenshots/4.jpg`,
       name: "Food Truck App",
       description:
         "This project is an app that allows users to search for a local food truck to read reviews, leave ratings, post about the food trucks, and find contact information for the trucks.",
@@ -42,6 +46,7 @@ const Portfolio = () => {
       repo: "https://github.com/kmcpherson49/food-truck-rating",
     },
     {
+      image: `../../assets/screenshots/5.jpg`,
       name: "Budget Tracker",
       description:
         "This project is an app that allows users to track their spending while traveling or in everyday life. This app showcases the features of a Progessive Web Applications with a cache and offline capabilites.",
@@ -50,31 +55,23 @@ const Portfolio = () => {
     },
   ]);
 
-  const currentProjects = project.filter((project) => project.name === project)
-
-  const toggleModal = (image, i) => {
-    setCurrentProject({ ...image, index: i });
-    setIsModalOpen(!isModalOpen);
-  };
-
   return (
     <div>
-      {isModalOpen && (
-        <Modal onClose={toggleModal} currentProject={currentProject} />
-      )}
-      <div className="flex-row">
-        {currentProjects.map((image, i) => (
-          <img
-            src={require(`../../assets/screenshots/${i}.jpg`)}
-            alt={image.name}
-            className="img-thumbnail mx-1"
-            onClick={() => toggleModal(image, i)}
-            key={image.name}
-          />
-        ))}
-      </div>
+      {project.map((project) => (
+        <Card>
+          <Card.Img variant="top" src={project.image} />
+          <Card.Body>
+            <Card.Title>{project.name}</Card.Title>
+            <Card.Text>{project.description}</Card.Text>
+          </Card.Body>
+          <Card.Body>
+            <Card.Link href={project.deployed}>Deployed</Card.Link>
+            <Card.Link href={project.repo}>Repo</Card.Link>
+          </Card.Body>
+        </Card>
+      ))}
     </div>
   );
-};
+}
 
 export default Portfolio;

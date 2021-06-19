@@ -6,9 +6,7 @@ function Nav(props) {
   const {
     tabs = [],
     setCurrentTab,
-    // contactSelected,
     currentTab,
-    // setContactSelected,
   } = props;
 
   useEffect(() => {
