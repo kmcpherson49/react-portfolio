@@ -1,7 +1,7 @@
 import React from "react";
 import About from "../About/about";
 import Contact from "../Contact/contact";
-import Portfolio from '../Portfolio/portfolio';
+import Portfolio from '../Portfolio';
 import Resume from "../Resume/resume";
 import CurrentPageContent from "../CurrentPageContent/CurrentPageContent";
 

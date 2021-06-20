@@ -29,6 +29,9 @@ function App() {
       <main>
       <Page currentTab={currentTab}></Page>
       </main>
+      <footer>
+      <h2>Made by KLM</h2>
+    </footer>
     </div>
   );
 }
